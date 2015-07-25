@@ -15,11 +15,11 @@ canvas.addEventListener("mousedown", down, false);
 //添加鼠标弹起事件 
 canvas.addEventListener("mouseup", up, false);
 //添加手指移动事件
-canvas.addEventListener("mousemove", draw, true);
+canvas.addEventListener("touchmove", draw, true);
 //添加手指触摸事件 
-canvas.addEventListener("mousedown", down, false);
+canvas.addEventListener("touchstart", down, false);
 //添加手指离开事件 
-canvas.addEventListener("mouseup", up, false);
+canvas.addEventListener("touchend", up, false);
 
 
 
