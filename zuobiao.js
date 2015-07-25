@@ -8,11 +8,20 @@ var oldy = 0;
 var lineColor = "white";
 var bcolor;
 var lineW = 4;
+//添加鼠标移动事件
 canvas.addEventListener("mousemove", draw, true);
 //添加鼠标按下事件 
 canvas.addEventListener("mousedown", down, false);
 //添加鼠标弹起事件 
 canvas.addEventListener("mouseup", up, false);
+//添加手指移动事件
+canvas.addEventListener("mousemove", draw, true);
+//添加手指触摸事件 
+canvas.addEventListener("mousedown", down, false);
+//添加手指离开事件 
+canvas.addEventListener("mouseup", up, false);
+
+
 
 function down(event) {
     onoff = true;
