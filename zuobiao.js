@@ -1,7 +1,7 @@
 ﻿var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 ctx.fillStyle = "black";
-ctx.fillRect(0, 0, 768, 600);
+ctx.fillRect(0, 0, 766, 600);
 var onoff = false;
 var oldx = 0;
 var oldy = 0;
