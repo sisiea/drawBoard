@@ -1,34 +1,115 @@
-﻿<!DOCTYPE html> 
-<html> 
-    <head> 
-        <title></title> 
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-        <style type="text/css">
-        .a{cursor:crosshair}
-        </style>
-    </head> 
-    <body> 
-    <br />
-        <canvas class=a id="myCanvas" width="768" height="600"> 
-        </canvas>
-        <br />
-        Color select:
-        <button id="yellowbtn" value="yellow" onclick="changecl(this)" >Yellow</button>
-        <button id="bluebtn" value="blue" onclick="changecl(this)" >Blue</button>
-        <button id="greenbtn" value="green" onclick="changecl(this)" >Green</button>
-        <button id="whitebtn" value="white" onclick="changecl(this)" >White</button>
-        <br />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <script src="./jquery.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            border:0;
+        }
+        body{
+            
+        }
+        .page-zone.current{
+            display:flex;
+            display: -webkit-flex; 
+        }
+        .page-zone{
+            height:100vh;
+            width:100vw;
+            display:none;
+        }
+        .page-zone.fir{
+            flex-direction:column ;
+            justify-content:space-between;
+        }
+        #clickLine{
+            position:absolute;
+            right:0;
+            bottom:0;
+            /*height:420px;*/
+            height:0px;
+            width:10px;
+            background-color:green;
+        }
+        #sec-grid{
+            display:flex;
+            display: -webkit-flex; 
+            height:300px;
+            width:100vw;
+            flex-wrap:wrap;
+            align-items:flex-start;
+            position:relative;
+        }
 
-        <button id="eraser" value="black" onclick="changecl(this)">Eraser</button>
-        <br />
-        <br />
-        lineWidth:
-        <button id="Wup" onclick="Wup()">Bigger</button>
-        <button id="Button1" onclick="Wdown()">Smaller</button>
-        <br />
-        <br />
-        <!--<button id="save" onclick="savepic(myCanvas)">Save_my_picture</button>还实现不了保存到本地-->
-        <script type="text/javascript" src="zuobiao.js"></script>
+        .add-sec{
+            width:50px;
+            height:50px;
+        }
+        .add-text{
+            display:none;
+             /*display:inline-block;*/
+            height:100%;
+            width:100%;
+            line-height:50px;
+            text-align:center;
+            color:green;
+        }
+        .add-text.show{
+            display:inline-block;
+        }
+        #add-btn{
+            height:300px;
+            width:100vw;
+            font-size:25px;
+        }
+        #tips{
+            display:none;
+        }
+        .page-zone.sec{
+            position:relative;
+        }
+        #pic{
+            margin-top:80px;
+        }
+        #text1{
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        #text2{
+            position:absolute;
+            top:50px;
+            left:0;
+        }
+    </style>
+</head>
+<body>
+<div class="page-zone fir current">
+    <div id="sec-grid">
+        <div id="clickLine"></div>
+    </div>
+    <div id="add-btn-zone">
+        <div id='tips'>加油！！！小心心！！</div>
+        <input type="button" value="趁着还在2016年，赶紧+1s！！" id="add-btn">
+    </div>
+</div>
+
+<div class="page-zone sec">
+    <img id="pic" src='./a.jpg'>
+    <div id='text1'>代表膜法师协会，祝小心心，在新的一年里在科研上取得卓越进步</div>
+    <div id='text2'>新的一年里，照顾好身体，别老是生病了</div>
+</div>
+
+<div class="page-zone thr">
+</div>
+    <script src="./index.js"></script>
 </body>
+
 </html>
+
